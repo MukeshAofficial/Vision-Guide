@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column; /* Set flex-direction to column */
+        justify-content: center;
+        align-items: center;
+        background-color: #000000; /* Black background */
+        color: white; /* White text */
+        font-family: Arial, sans-serif; /* Choose your preferred font */
+    }
+    
+    h1 {
+        margin-bottom: 20px; /* Add some space below the heading */
+    }
+    
+    p {
+        font-size: 24px; /* Adjust font size as needed */
+    }
+    </style>
+</head>
+<body>
+    <h1>Listening.....</h1>
+   
+    
+    <script>
+        // Check if browser supports speech recognition
+        if ('webkitSpeechRecognition' in window) {
+            // Create speech recognition object
+            var recognition = new webkitSpeechRecognition();
+            recognition.continuous = true;
+            recognition.lang = 'en-US';
+
+            recognition.onresult = function(event) {
+                for (var i = event.resultIndex; i < event.results.length; i++) {
+                    var transcript = event.results[i][0].transcript.toLowerCase(); // Convert to lowercase for case-insensitive comparison
+                    console.log('You said: ', transcript);
+                    if (transcript.includes('go to gpt')) {
+                        window.location.href = '/gpt';
+                    } else if (transcript.includes('scan photo')) { // Added elif statement for "scan photo" command
+                        window.location.href = '/scan';
+                    }
+                }
+            };
+
+            recognition.start();
+        } else {
+            console.log('Speech recognition not supported');
+        }
+    </script>
+</body>
+</html>

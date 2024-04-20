@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scenery Explanation Result</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      text-shadow: 2px 2px 4px #000000;
+    }
+
+    #audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Scenery Explanation Result</h1>
+
+  <!-- Hidden audio element to play the generated audio -->
+  <audio autoplay controls>
+    <source src="{{ url_for('static', filename=audio) }}" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+  <script>
+    // Play the audio when the page loads
+    window.onload = function() {
+      document.getElementById('audio').play();
+    };
+  </script>
+</body>
+</html>
