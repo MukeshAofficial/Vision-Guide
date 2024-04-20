@@ -15,7 +15,7 @@ The Vision Guide is a revolutionary project aimed at providing assistance throug
 - Users can activate image recognition by speaking commands like "Scan photo".
 - The camera module opens to capture an image when prompted by the user.
 - The captured image is analyzed by Gemini for recognition.
-- Gemini generates a simple description of the image's content.
+- Gemini analyzes the images and provides descriptive narratives of their content.
 - The description is converted to speech and communicated to the user.
 
 ## WorkFlow
