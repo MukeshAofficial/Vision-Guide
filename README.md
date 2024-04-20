@@ -18,6 +18,10 @@ The Vision Guide is a revolutionary project aimed at providing assistance throug
 - Gemini generates a simple description of the image's content.
 - The description is converted to speech and communicated to the user.
 
+## WorkFlow
+![image](https://github.com/MukeshAofficial/Vision-Guide/assets/132742860/f9cc0f40-035d-42e1-90b5-8071aa6eb93f)
+
+
 ## Technologies Used
 - Speech-to-text module for converting voice input to text.
 - Text-to-speech module for converting responses to speech.
