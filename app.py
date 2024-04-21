@@ -78,7 +78,10 @@ def gpt():
             encoded_string = ""
         
         # Return the response to the client
-        return redirect(url_for('result'))
+        return render_template('gpt.html', response=response_text, audio=encoded_string)
+    else:
+        # If it's a GET request, render the form
+        return render_template('gpt.html')
 @app.route('/result')
 def result():
     audio_url = "output.mp3"
