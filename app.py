@@ -10,7 +10,8 @@ import textwrap
 app = Flask(__name__)
 
 # Configure Generative AI
-genai.configure(api_key="Your-Gemini-Api")
+genai.configure(api_key="AIzaSyAbmCYsZsjfCPf-uakFksDglYasW4EsehE")
+
 model = genai.GenerativeModel('gemini-pro-vision')
 
 @app.route('/')
@@ -63,6 +64,7 @@ def gpt():
         # Generate response using the transcribed text
         if transcribed_text:
             # Generate response using Generative AI model
+            model = genai.GenerativeModel('gemini-1.5-flash')
             rply = model.generate_content("explain in 3 lines"+ transcribed_text)
             response_text = rply.text
             print(response_text)
