@@ -12,7 +12,7 @@ app = Flask(__name__)
 # Configure Generative AI
 genai.configure(api_key="AIzaSyAbmCYsZsjfCPf-uakFksDglYasW4EsehE")
 
-model = genai.GenerativeModel('gemini-pro-vision')
+model = genai.GenerativeModel('gemini-1.5-flash')
 
 @app.route('/')
 def index():
