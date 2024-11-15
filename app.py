@@ -11,7 +11,7 @@ import textwrap
 app = Flask(__name__)
 translator = Translator()
 # Configure Generative AI
-genai.configure(api_key="AIzaSyB4Go6j0e342y5l7mSvzyb4BWTDZFcW7oM")
+genai.configure(api_key="AIzaSyDqYe2MmvwxHZR8WBeefRx1eagXF-dydyA")
 
 
 @app.route('/')
