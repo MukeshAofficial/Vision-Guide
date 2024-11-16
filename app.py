@@ -107,7 +107,7 @@ def gpt():
         # Generate response using the transcribed text
         if transcribed_text:
             # Generate response using Generative AI model
-            model = genai.GenerativeModel('gemini-pro')
+            model = genai.GenerativeModel('gemini-1.5-flash')
             rply = model.generate_content("explain in 3 lines"+ transcribed_text)
             response_text = rply.text
             print(response_text)
